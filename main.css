@@ -3,7 +3,8 @@
 	margin: 0;
 	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		sans-serif;
-	line-height: 1.6;
+		line-height: 1.6;
+		transition: 0.3s;
 }
 
 header {
@@ -38,6 +39,45 @@ header {
 	color: #2563eb;
 }
 .nav-2 a:hover {
-	transition: 0.3s;
 	color: #2563eb;
+}
+
+.avatar-box {
+	max-width: 1200px;
+	margin: 10px auto;
+	display: flex;
+	justify-content: center;
+}
+
+.text-box {
+	text-align: center;
+}
+
+.first {
+}
+
+.first button:first-child {
+	width: 120px;
+	background-color: #2563eb;
+	padding: 10px;
+	color: white;
+	border: none;
+	border-radius: 7px;
+}
+
+.first button:last-child {
+	color: #2563eb;
+	border: 1px solid #2563eb;
+	width: 120px;
+	border-radius: 7px;
+	padding: 10px;
+	background-color: white;
+}
+
+.first button:first-child:hover {
+	background-color: #1e40af;
+}
+.first button:last-child:hover {
+	background-color: #2563eb;
+	color: white;
 }
