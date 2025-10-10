@@ -50,16 +50,13 @@ header {
 }
 
 .text-box {
+	font-size: 1.5rem;
 	text-align: center;
 }
-
-.first {
-}
-
 .first button:first-child {
-	width: 120px;
+	width: 10rem;
 	background-color: #2563eb;
-	padding: 10px;
+	padding: 1em;
 	color: white;
 	border: none;
 	border-radius: 7px;
@@ -68,9 +65,9 @@ header {
 .first button:last-child {
 	color: #2563eb;
 	border: 1px solid #2563eb;
-	width: 120px;
+	width: 10rem;
 	border-radius: 7px;
-	padding: 10px;
+	padding: 1em;
 	background-color: white;
 }
 
@@ -80,4 +77,8 @@ header {
 .first button:last-child:hover {
 	background-color: #2563eb;
 	color: white;
+}
+
+.social-medias a {
+	color: rgb(29, 29, 29);
 }
