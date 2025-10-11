@@ -42,8 +42,11 @@ header {
 	color: #2563eb;
 }
 
+.home{
+	padding: 10vh;
+}
+
 .avatar-box {
-	max-width: 1200px;
 	margin: 10px auto;
 	display: flex;
 	justify-content: center;
@@ -81,4 +84,23 @@ header {
 
 .social-medias a {
 	color: rgb(29, 29, 29);
+}
+
+.about-me {
+	color: rgb(82, 82, 82);
+	text-align: center;
+	background-color: #F3F4F6;
+	padding: 4vh;
+}
+.about-me h1 {
+	color: #1F2937;
+}
+.about-me button {
+	font-size: 1rem;
+	border-radius: 1rem;
+	border: none;
+	box-shadow: 5px 5px 5px rgb(218, 213, 213);
+	background-color: white;
+	padding: 5px 10px;
+	margin: 1vw;
 }
