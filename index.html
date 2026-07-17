@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Islombek Matkarimov | Full Stack Developer</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Personal website of Islombek Matkarimov, Frontend & Backend Developer specializing in React, NodeJS, MongoDB, and custom Telegram bots.">
+  <meta name="keywords"
+    content="Islombek Matkarimov, Web Developer, Frontend, Backend, Telegram Bot, Chef Food Xiva Bot, React, NodeJS, MongoDB">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+  <!-- Particles Canvas Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Glowing Custom Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>Islombek<span class="logo-accent">.dev /&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active" data-en="Home" data-uz="Bosh sahifa">Home</a>
+        <a href="#about" class="nav-link" data-en="About & Skills" data-uz="Men haqimda">About & Skills</a>
+        <a href="#bot-simulator" class="nav-link" data-en="Bot Simulator" data-uz="Bot Simulator">Bot Simulator</a>
+        <a href="#projects" class="nav-link" data-en="Projects" data-uz="Loyihalar">Projects</a>
+        <a href="#flow-visualizer" class="nav-link" data-en="Backend Flow" data-uz="Backend Oqim">Backend Flow</a>
+        <a href="#contact" class="nav-link" data-en="Contact" data-uz="Aloqa">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+          <span class="lang-text">EN</span>
+          <i class="fa-solid fa-globe"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="section-container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span data-en="Available for freelance & full-time" data-uz="Frilans va ish uchun tayyor">Available for
+              freelance & full-time</span>
+          </div>
+          <h1 class="hero-title" data-en="Hi, I am Islombek" data-uz="Salom, men Islombekman">Hi, I am Islombek</h1>
+          <div class="typing-container">
+            <span class="typing-text" id="typing-text"></span>
+          </div>
+          <p class="hero-description"
+            data-en="I craft high-performance frontend interfaces, robust backend APIs, and highly interactive Telegram bots. Bridging the gap between design and scalable code."
+            data-uz="Men yuqori samarali frontend interfeyslarni, mustahkam backend API-larni va yuqori interaktiv Telegram botlarini yarataman. Dizayn va kengayuvchan kod o'rtasidagi ko'prik.">
+            I craft high-performance frontend interfaces, robust backend APIs, and highly interactive Telegram bots.
+            Bridging the gap between design and scalable code.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary" data-en="Let's Talk" data-uz="Bog'lanish">Let's Talk</a>
+            <a href="#bot-simulator" class="btn btn-secondary" data-en="Test Bot Simulator"
+              data-uz="Botni sinab ko'rish">Test Bot Simulator</a>
+            <button class="btn btn-text" id="open-resume-btn">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span data-en="View Resume" data-uz="Rezyumeni ko'rish">View Resume</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card-wrapper">
+            <div class="glow-effect"></div>
+            <div class="visual-card">
+              <div class="card-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="card-title">server.js</span>
+              </div>
+              <div class="card-body code-font">
+                <p class="code-line"><span class="keyword">const</span> express = <span
+                    class="string">require</span>(<span class="string">'express'</span>);</p>
+                <p class="code-line"><span class="keyword">const</span> mongoose = <span
+                    class="string">require</span>(<span class="string">'mongoose'</span>);</p>
+                <p class="code-line"><span class="keyword">const</span> app = <span class="function">express</span>();
+                </p>
+                <p class="code-line">&nbsp;</p>
+                <p class="code-line"><span class="comment">// MongoDB Connection</span></p>
+                <p class="code-line">mongoose.<span class="function">connect</span>(process.env.MONGO_URI)</p>
+                <p class="code-line">&nbsp;&nbsp;.<span class="function">then</span>(() => console.<span
+                    class="function">log</span>(<span class="string">'Database online! 🚀'</span>));</p>
+                <p class="code-line">&nbsp;</p>
+                <p class="code-line"><span class="comment">// Telegram Bot Webhook Init</span></p>
+                <p class="code-line">app.<span class="function">post</span>(<span
+                    class="string">'/webhook/chef-bot'</span>, (req, res) => {</p>
+                <p class="code-line">&nbsp;&nbsp;bot.<span class="function">handleUpdate</span>(req.body);</p>
+                <p class="code-line">&nbsp;&nbsp;res.<span class="function">sendStatus</span>(<span
+                    class="number">200</span>);</p>
+                <p class="code-line">});</p>
+                <p class="code-line">&nbsp;</p>
+                <p class="code-line">app.<span class="function">listen</span>(<span class="number">3000</span>, () => {
+                </p>
+                <p class="code-line">&nbsp;&nbsp;console.<span class="function">log</span>(<span class="string">'Server
+                    running on port 3000...'</span>);</p>
+                <p class="code-line">});</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Skills Section -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <h2 class="section-title text-center" data-en="About & Skills" data-uz="Men haqimda va Ko'nikmalar">About &
+          Skills</h2>
+        <p class="section-subtitle text-center"
+          data-en="The technologies and methodologies I use to bring ideas to life."
+          data-uz="G'oyalarni hayotga tatbiq etishda foydalanadigan texnologiyalarim.">The technologies and
+          methodologies I use to bring ideas to life.</p>
+
+        <div class="about-grid">
+          <div class="about-text-card">
+            <h3 data-en="Who am I?" data-uz="Men kimman?">Who am I?</h3>
+            <p data-en="I am Islombek Matkarimov, a versatile developer focused on building modern web applications and integrated automation tools. With a strong grasp of both client-side design and server-side logic, I develop smooth user interfaces and connect them with high-performing backends."
+              data-uz="Men Islombek Matkarimov, zamonaviy veb-ilovalarni va integratsiyalashgan avtomatlashtirish vositalarini yaratishga e'tibor qaratadigan ko'p qirrali dasturchiman. Mijoz tomonidagi dizayn va server tomonidagi mantiqni mukammal tushungan holda, men qulay foydalanuvchi interfeyslarini ishlab chiqaman va ularni yuqori samarali backendlar bilan bog'layman.">
+              I am Islombek Matkarimov, a versatile developer focused on building modern web applications and integrated
+              automation tools. With a strong grasp of both client-side design and server-side logic, I develop smooth
+              user interfaces and connect them with high-performing backends.
+            </p>
+            <p data-en="I enjoy designing automation pipelines, optimizing database structures, and building user-centric solutions. Let's create something functional and beautiful together!"
+              data-uz="Men avtomatlashtirish quvurlarini loyihalashni, ma'lumotlar bazasi tuzilmalarini optimallashtirishni va foydalanuvchiga yo'naltirilgan echimlarni yaratishni yoqtiraman. Keling, birgalikda funksional va chiroyli narsa yarataylik!">
+              I enjoy designing automation pipelines, optimizing database structures, and building user-centric
+              solutions. Let's create something functional and beautiful together!
+            </p>
+            <div class="quick-info-grid">
+              <div class="info-item">
+                <i class="fa-solid fa-code text-cyan"></i>
+                <div>
+                  <h4 data-en="Frontend" data-uz="Frontend">Frontend</h4>
+                  <p>ReactJS, JS, CSS, Bootstrap</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-server text-violet"></i>
+                <div>
+                  <h4 data-en="Backend" data-uz="Backend">Backend</h4>
+                  <p>NodeJS, Express, Telegram Bot API</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-database text-green"></i>
+                <div>
+                  <h4 data-en="Database" data-uz="Ma'lumotlar bazasi">Database</h4>
+                  <p>MongoDB, Mongoose</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-showcase">
+            <h3 data-en="My Tech Stack" data-uz="Texnologiyalarim">My Tech Stack</h3>
+            <div class="skills-grid">
+
+              <!-- Skill: ReactJS -->
+              <div class="skill-card" data-glow-color="#61dafb">
+                <div class="skill-icon-wrapper">
+                  <i class="fab fa-react skill-icon" style="color: #61dafb;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">ReactJS</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 88%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill: NodeJS -->
+              <div class="skill-card" data-glow-color="#339933">
+                <div class="skill-icon-wrapper">
+                  <i class="fab fa-node-js skill-icon" style="color: #339933;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">NodeJS</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill: MongoDB -->
+              <div class="skill-card" data-glow-color="#47a248">
+                <div class="skill-icon-wrapper">
+                  <i class="fa-solid fa-leaf skill-icon" style="color: #47a248;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">MongoDB</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill: Telegram Bot -->
+              <div class="skill-card" data-glow-color="#0088cc">
+                <div class="skill-icon-wrapper">
+                  <i class="fab fa-telegram-plane skill-icon" style="color: #0088cc;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">Telegram Bot</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 95%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill: JavaScript -->
+              <div class="skill-card" data-glow-color="#f7df1e">
+                <div class="skill-icon-wrapper">
+                  <i class="fab fa-js skill-icon" style="color: #f7df1e;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill: Bootstrap -->
+              <div class="skill-card" data-glow-color="#7952b3">
+                <div class="skill-icon-wrapper">
+                  <i class="fab fa-bootstrap skill-icon" style="color: #7952b3;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">Bootstrap</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill: HTML5 -->
+              <div class="skill-card" data-glow-color="#e34f26">
+                <div class="skill-icon-wrapper">
+                  <i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">HTML5</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 95%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill: CSS3 -->
+              <div class="skill-card" data-glow-color="#1572b6">
+                <div class="skill-icon-wrapper">
+                  <i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i>
+                </div>
+                <div class="skill-info">
+                  <span class="skill-name">CSS3</span>
+                  <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Telegram Bot Simulator Section -->
+    <section class="bot-simulator-section" id="bot-simulator">
+      <div class="section-container">
+        <h2 class="section-title text-center" data-en="Telegram Bot Simulator" data-uz="Telegram Bot Simulatori">
+          Telegram Bot Simulator</h2>
+        <p class="section-subtitle text-center"
+          data-en="Interact with a live web simulation of my chef restaurant bot @chef_food_xiva_bot."
+          data-uz="Mening @chef_food_xiva_bot restoran botimning jonli veb-simulyatori bilan o'zaro aloqada bo'ling.">
+          Interact with a live web simulation of my chef restaurant bot @chef_food_xiva_bot.</p>
+
+        <div class="simulator-grid">
+          <div class="simulator-intro">
+            <h3 data-en="Chef Food Xiva Bot" data-uz="Chef Food Xiva Bot">Chef Food Xiva Bot</h3>
+            <p class="bot-username"><i class="fab fa-telegram"></i> @chef_food_xiva_bot</p>
+            <p data-en="This bot is a fully featured restaurant ordering assistant that I developed. It allows customers to browse the menu, select items, manage their cart, and place orders directly. It sends automatic real-time alerts to the restaurant chefs and keeps customers informed of their order status."
+              data-uz="Ushbu bot men tomondan ishlab chiqilgan to'liq funksional restoran buyurtma yordamchisidir. U mijozlarga menyuni ko'rish, taomlarni tanlash, savatchani boshqarish va to'g'ridan-to'g're buyurtma berish imkonini beradi. U oshpazlarga real vaqt rejimida buyurtma xabarlarini yuboradi va mijozlarni buyurtma holatidan xabardor qiladi.">
+              This bot is a fully featured restaurant ordering assistant that I developed. It allows customers to browse
+              the menu, select items, manage their cart, and place orders directly. It sends automatic real-time alerts
+              to the restaurant chefs and keeps customers informed of their order status.
+            </p>
+
+            <div class="simulator-features">
+              <div class="feature-badge"><i class="fa-solid fa-utensils"></i> <span data-en="Dynamic Menu"
+                  data-uz="Dinamik menyu">Dynamic Menu</span></div>
+              <div class="feature-badge"><i class="fa-solid fa-shopping-basket"></i> <span data-en="Cart Management"
+                  data-uz="Savat boshqaruvi">Cart Management</span></div>
+              <div class="feature-badge"><i class="fa-solid fa-bell"></i> <span data-en="Chef Notifications"
+                  data-uz="Oshpaz xabarnomalari">Chef Notifications</span></div>
+              <div class="feature-badge"><i class="fa-solid fa-gears"></i> <span data-en="NodeJS Webhooks"
+                  data-uz="NodeJS Webhooklar">NodeJS Webhooks</span></div>
+            </div>
+
+            <div class="simulation-instructions">
+              <h4 data-en="How to use the simulator:" data-uz="Simulyatordan foydalanish tartibi:">How to use the
+                simulator:</h4>
+              <ul>
+                <li data-en="Click '/start' or use the quick buttons below the screen to talk to the bot."
+                  data-uz="Bot bilan muloqot qilish uchun '/start' ni bosing yoki ekran ostidagi tezkor tugmalardan foydalaning.">
+                  Click '/start' or use the quick buttons below the screen to talk to the bot.</li>
+                <li data-en="Browse categories like Pizza, Burgers, or Drinks."
+                  data-uz="Pitsa, Burger yoki Ichimliklar kabi toifararni ko'rib chiqing.">Browse categories like Pizza,
+                  Burgers, or Drinks.</li>
+                <li data-en="Add items to your cart and click checkout to simulate order delivery!"
+                  data-uz="Savatga mahsulotlar qo'shing va buyurtma yetkazib berilishini simulyatsiya qilish uchun to'lovni bosing!">
+                  Add items to your cart and click checkout to simulate order delivery!</li>
+              </ul>
+            </div>
+
+            <a href="https://t.me/chef_food_xiva_bot" target="_blank" rel="noopener noreferrer"
+              class="btn btn-telegram-style">
+              <i class="fab fa-telegram-plane"></i>
+              <span data-en="Open Actual Bot on Telegram" data-uz="Haqiqiy botni Telegramda ochish">Open Actual Bot on
+                Telegram</span>
+            </a>
+          </div>
+
+          <!-- Smartphone Telegram Mockup -->
+          <div class="phone-mockup">
+            <div class="phone-case">
+              <div class="phone-screen">
+                <!-- Telegram App Header -->
+                <div class="tg-header">
+                  <div class="tg-back"><i class="fa-solid fa-arrow-left"></i></div>
+                  <div class="tg-bot-avatar">👨‍🍳</div>
+                  <div class="tg-bot-info">
+                    <span class="tg-bot-name">Chef Food Xiva Bot</span>
+                    <span class="tg-bot-status" data-en="bot" data-uz="bot">bot</span>
+                  </div>
+                  <div class="tg-more"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+
+                <!-- Chat Body -->
+                <div class="tg-chat-body" id="tg-chat-body">
+                  <div class="tg-system-date" data-en="Today" data-uz="Bugun">Today</div>
+
+                  <div class="tg-bot-start-prompt" id="tg-start-prompt">
+                    <h5 data-en="What can this bot do?" data-uz="Bu bot nima qila oladi?">What can this bot do?</h5>
+                    <p data-en="Welcome to Chef Food Xiva Bot! You can view our menu, order food, and get it delivered directly in Xiva. Press /start to begin."
+                      data-uz="Chef Food Xiva Bot-ga xush kelibsiz! Siz menyuni ko'rishingiz, taom buyurtma qilishingiz va uni Xivada yetkazib berishlaridan olishingiz mumkin. Boshlash uchun /start ni bosing.">
+                      Welcome to Chef Food Xiva Bot! You can view our menu, order food, and get it delivered directly in
+                      Xiva. Press /start to begin.</p>
+                  </div>
+                </div>
+
+                <!-- Reply Keyboard (Inline or bottom keys) -->
+                <div class="tg-keyboard-area" id="tg-keyboard-area">
+                  <button class="tg-keyboard-btn start-btn" id="start-simulation-btn">/start</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        <h2 class="section-title text-center" data-en="Developer's Playground" data-uz="Dasturchi Maydonchasi">
+          Developer's Playground</h2>
+        <p class="section-subtitle text-center"
+          data-en="Interactive simple projects illustrating core frontend and algorithm logics."
+          data-uz="Frontend va algoritm mantiqlarini ko'rsatadigan interaktiv oddiy loyihalar.">Interactive simple
+          projects illustrating core frontend and algorithm logics.</p>
+
+        <div class="projects-tabs">
+          <button class="tab-btn active" id="tab-btn-markdown" data-en="Live Markdown Editor"
+            data-uz="Jonli Markdown Tahrirlovchisi">Live Markdown Editor</button>
+          <button class="tab-btn" id="tab-btn-json" data-en="JSON Formatter & Validator"
+            data-uz="JSON Formatlovchi va Tekshiruvchi">JSON Formatter & Validator</button>
+        </div>
+
+        <div class="playground-card">
+          <!-- Markdown Editor Tab -->
+          <div class="tab-content active" id="tab-markdown">
+            <div class="playground-grid">
+              <div class="pane input-pane">
+                <div class="pane-header">
+                  <span data-en="Markdown Input" data-uz="Markdown kiritish">Markdown Input</span>
+                  <span class="file-tag">README.md</span>
+                </div>
+                <textarea id="markdown-input" class="code-font"
+                  placeholder="# Hello World&#10;&#10;Write some **markdown** here to see it render live!&#10;&#10;- Simple item 1&#10;- Simple item 2&#10;&#10;> Keep coding!"># Islombek's Portfolio Website
+
+Welcome to my personal site! This is a **live markdown editor** running completely in your browser.
+
+## Tech Stack
+- Frontend: HTML, CSS, JavaScript
+- Styling: Custom Glassmorphism CSS
+- Engine: Custom JS parser
+
+### Features
+1. Real-time rendering
+2. Responsive preview
+3. Pure client-side execution</textarea>
+              </div>
+              <div class="pane output-pane">
+                <div class="pane-header">
+                  <span data-en="HTML Preview" data-uz="HTML Ko'rinishi">HTML Preview</span>
+                  <span class="preview-badge">LIVE</span>
+                </div>
+                <div class="preview-render" id="markdown-preview"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JSON Formatter Tab -->
+          <div class="tab-content" id="tab-json">
+            <div class="playground-grid">
+              <div class="pane input-pane">
+                <div class="pane-header">
+                  <span data-en="JSON Raw Input" data-uz="JSON Xom Matn">JSON Raw Input</span>
+                  <div class="pane-actions">
+                    <button class="small-btn" id="load-sample-json-btn" data-en="Load Sample"
+                      data-uz="Namuna yuklash">Load Sample</button>
+                  </div>
+                </div>
+                <textarea id="json-input" class="code-font" placeholder='{"key": "value"}'></textarea>
+              </div>
+              <div class="pane output-pane">
+                <div class="pane-header">
+                  <span data-en="Formatted / Validated JSON" data-uz="Formatlangan JSON">Formatted / Validated
+                    JSON</span>
+                  <div class="pane-actions">
+                    <button class="small-btn success-btn" id="beautify-json-btn" data-en="Beautify"
+                      data-uz="Formatlash">Beautify</button>
+                    <button class="small-btn" id="minify-json-btn" data-en="Minify"
+                      data-uz="Minifikatsiya">Minify</button>
+                  </div>
+                </div>
+                <div class="json-validation-bar" id="json-status-bar">
+                  <span data-en="Enter JSON and press Beautify" data-uz="JSON kiriting va Formatlashni bosing">Enter
+                    JSON and press Beautify</span>
+                </div>
+                <pre class="json-output-render code-font" id="json-output"></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Backend Flow Visualizer Section -->
+    <section class="flow-visualizer-section" id="flow-visualizer">
+      <div class="section-container">
+        <h2 class="section-title text-center" data-en="NodeJS & MongoDB Flow" data-uz="NodeJS va MongoDB Oqimi">NodeJS &
+          MongoDB Flow</h2>
+        <p class="section-subtitle text-center"
+          data-en="Interactive pipeline demonstrating backend routing, API controllers, and database actions."
+          data-uz="Backend marshrutlash, API nazoratchilari va ma'lumotlar bazasi harakatlarini ko'rsatadigan interaktiv quvur.">
+          Interactive pipeline demonstrating backend routing, API controllers, and database actions.</p>
+
+        <div class="visualizer-container">
+          <div class="visualizer-trigger-area">
+            <button class="btn btn-primary btn-pulse" id="trigger-flow-btn">
+              <i class="fa-solid fa-play"></i>
+              <span data-en="Simulate API Request" data-uz="API so'rovini simulyatsiya qilish">Simulate API
+                Request</span>
+            </button>
+            <p class="trigger-desc" data-en="Click to send a mock order POST request through the server system."
+              data-uz="Server tizimi orqali soxta buyurtma berish POST so'rovini yuborish uchun bosing.">Click to send a
+              mock order POST request through the server system.</p>
+          </div>
+
+          <!-- Flow Pipeline Nodes -->
+          <div class="flow-pipeline">
+            <div class="flow-node active" id="node-client">
+              <div class="node-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+              <div class="node-details">
+                <h5>Client</h5>
+                <p data-en="Telegram Webhook" data-uz="Telegram Webhook">Telegram Webhook</p>
+              </div>
+            </div>
+
+            <div class="flow-connector" id="conn-1"><span class="pulse-ball"></span></div>
+
+            <div class="flow-node" id="node-router">
+              <div class="node-icon"><i class="fa-solid fa-route"></i></div>
+              <div class="node-details">
+                <h5>Express Router</h5>
+                <p class="code-font">POST /webhook</p>
+              </div>
+            </div>
+
+            <div class="flow-connector" id="conn-2"><span class="pulse-ball"></span></div>
+
+            <div class="flow-node" id="node-controller">
+              <div class="node-icon"><i class="fa-solid fa-gears"></i></div>
+              <div class="node-details">
+                <h5>Controller</h5>
+                <p data-en="Process Order" data-uz="Buyurtmani qayta ishlash">Process Order</p>
+              </div>
+            </div>
+
+            <div class="flow-connector" id="conn-3"><span class="pulse-ball"></span></div>
+
+            <div class="flow-node" id="node-db">
+              <div class="node-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="node-details">
+                <h5>MongoDB</h5>
+                <p class="code-font">db.orders.save()</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Server Log Board -->
+          <div class="server-logs">
+            <div class="logs-header">
+              <span class="logs-title"><i class="fa-solid fa-terminal"></i> node-server-console.log</span>
+              <span class="status-indicator online" id="server-status">ONLINE</span>
+            </div>
+            <div class="logs-body code-font" id="server-logs-body">
+              <p class="log-line">[SYSTEM] Express Server listening on port 3000...</p>
+              <p class="log-line">[SYSTEM] Mongoose connected to MongoDB cluster.</p>
+              <p class="log-line text-muted">[Ready to process requests...]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Socials Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <h2 class="section-title text-center" data-en="Get In Touch" data-uz="Bog'lanish">Get In Touch</h2>
+        <p class="section-subtitle text-center"
+          data-en="Have a project in mind or want to hire me? Let's discuss details."
+          data-uz="Loyihangiz bormi yoki meni ishga olmoqchimisiz? Tafsilotlarni muhokama qilamiz.">Have a project in
+          mind or want to hire me? Let's discuss details.</p>
+
+        <div class="contact-grid">
+          <!-- Social & Contact cards -->
+          <div class="contact-cards-group">
+
+            <a href="https://t.me/mtkrmv07" target="_blank" rel="noopener noreferrer"
+              class="contact-social-card card-tg">
+              <div class="social-icon"><i class="fab fa-telegram"></i></div>
+              <div class="social-info">
+                <h4>Telegram</h4>
+                <p>@mtkrmv07</p>
+              </div>
+              <div class="social-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://www.instagram.com/islombekmtkrmv/" target="_blank" rel="noopener noreferrer"
+              class="contact-social-card card-ig">
+              <div class="social-icon"><i class="fab fa-instagram"></i></div>
+              <div class="social-info">
+                <h4>Instagram</h4>
+                <p>@islombekmtkrmv</p>
+              </div>
+              <div class="social-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="tel:+998991491715" class="contact-social-card card-phone">
+              <div class="social-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="social-info">
+                <h4 data-en="Phone" data-uz="Telefon">Phone</h4>
+                <p>+998 99 149 17 15</p>
+              </div>
+              <div class="social-action"><i class="fa-solid fa-phone-volume"></i></div>
+            </a>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" data-en="Full Name" data-uz="To'liq ismingiz">Full Name</label>
+                  <input type="text" id="form-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="form-email" data-en="Email Address" data-uz="Email manzilingiz">Email Address</label>
+                  <input type="email" id="form-email" required placeholder="john@example.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-subject" data-en="Subject" data-uz="Mavzu">Subject</label>
+                <input type="text" id="form-subject" required placeholder="Project Proposal">
+              </div>
+              <div class="form-group">
+                <label for="form-message" data-en="Your Message" data-uz="Xabaringiz">Your Message</label>
+                <textarea id="form-message" required rows="5" placeholder="Let's build something..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100" id="form-submit-btn">
+                <span data-en="Send Message" data-uz="Xabarni yuborish">Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <div class="form-status" id="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Resume Modal -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="resume-modal-card">
+      <div class="modal-header">
+        <h3 data-en="Resume / CV" data-uz="Rezyume / CV">Resume / CV</h3>
+        <button class="close-modal-btn" id="close-resume-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="resume-header">
+          <h2>Islombek Matkarimov</h2>
+          <p class="subtitle" data-en="Frontend + Backend Developer" data-uz="Frontend + Backend Dasturchi">Frontend +
+            Backend Developer</p>
+          <div class="resume-contact-links">
+            <span><i class="fa-solid fa-envelope"></i> mtkrmv07@t.me</span>
+            <span><i class="fa-solid fa-phone"></i> +998 99 149 17 15</span>
+            <span><i class="fa-solid fa-location-dot"></i> Khorezm, Uzbekistan</span>
+          </div>
+        </div>
+
+        <div class="resume-divider"></div>
+
+        <div class="resume-sections-grid">
+          <div class="resume-left-col">
+            <div class="resume-sec">
+              <h4 data-en="Education" data-uz="Ta'lim">Education</h4>
+              <div class="resume-item">
+                <h5>Self-taught & Specialized Courses</h5>
+                <p class="duration">2023 - Present</p>
+                <p data-en="In-depth programming instruction covering HTML, CSS, JavaScript, ReactJS, NodeJS, Express, MongoDB, and Telegram Bot architectures."
+                  data-uz="HTML, CSS, JavaScript, ReactJS, NodeJS, Express, MongoDB va Telegram Bot arxitekturasini qamrab olgan chuqur dasturlash ta'limi.">
+                  In-depth programming instruction covering HTML, CSS, JavaScript, ReactJS, NodeJS, Express, MongoDB,
+                  and Telegram Bot architectures.</p>
+              </div>
+            </div>
+
+            <div class="resume-sec">
+              <h4 data-en="Languages" data-uz="Tillar">Languages</h4>
+              <ul class="resume-langs">
+                <li><strong>Uzbek:</strong> Native</li>
+                <li><strong>English:</strong> Technical reading / writing</li>
+                <li><strong>Russian:</strong> Conversational</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-right-col">
+            <div class="resume-sec">
+              <h4 data-en="Core Technical Stack" data-uz="Texnik ko'nikmalar">Core Technical Stack</h4>
+              <div class="resume-tech-grid">
+                <span>ReactJS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>Bootstrap</span>
+                <span>HTML5 / CSS3</span>
+                <span>Telegram Bot API</span>
+                <span>RESTful APIs</span>
+                <span>Git / GitHub</span>
+              </div>
+            </div>
+
+            <div class="resume-sec">
+              <h4 data-en="Projects & Experience" data-uz="Loyihalar va Tajriba">Projects & Experience</h4>
+              <div class="resume-item">
+                <h5>Chef Food Xiva Bot (@chef_food_xiva_bot)</h5>
+                <p class="duration">Freelance Project | 2024</p>
+                <p data-en="Developed a customer ordering bot for a restaurant in Xiva. Built with Node.js and MongoDB to manage active menus, order states, shopping carts, and immediate notification dispatching to culinary staff."
+                  data-uz="Xivadagi restoran uchun mijoz buyurtma botini ishlab chiqdi. Faol menyular, buyurtma holatlari, xarid savatchalari va oshxona xodimlariga tezkor xabarnomalar yuborishni boshqarish uchun Node.js va MongoDB bilan yaratilgan.">
+                  Developed a customer ordering bot for a restaurant in Xiva. Built with Node.js and MongoDB to manage
+                  active menus, order states, shopping carts, and immediate notification dispatching to culinary staff.
+                </p>
+              </div>
+              <div class="resume-item">
+                <h5>Developer Tools Dashboard</h5>
+                <p class="duration">Personal Project</p>
+                <p data-en="Created a functional set of browser utility applications including a live Markdown formatter and dynamic JSON minifier/prettifier."
+                  data-uz="Jonli Markdown formatlagichi va dinamik JSON minifikatori/chiroyli qiluvchisi kabi brauzer utilit ilovalari to'plamini yaratdi.">
+                  Created a functional set of browser utility applications including a live Markdown formatter and
+                  dynamic JSON minifier/prettifier.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-footer-actions">
+          <button class="btn btn-secondary" onclick="window.print()">
+            <i class="fa-solid fa-print"></i>
+            <span data-en="Print / Save PDF" data-uz="Chop etish / PDF saqlash">Print / Save PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container footer-content">
+      <p>&copy; 2026 Islombek Matkarimov. <span data-en="All rights reserved."
+          data-uz="Barcha huquqlar himoyalangan.">All rights reserved.</span></p>
+      <div class="footer-socials">
+        <a href="https://t.me/mtkrmv07" target="_blank" rel="noopener noreferrer" aria-label="Telegram Profile"><i
+            class="fab fa-telegram"></i></a>
+        <a href="https://www.instagram.com/islombekmtkrmv/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+998991491715" aria-label="Phone Call"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
