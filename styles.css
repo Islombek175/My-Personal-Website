@@ -329,6 +329,7 @@ body.cursor-hover .custom-cursor-dot {
 	font-weight: 800;
 	font-size: 1.5rem;
 	letter-spacing: -0.03em;
+	white-space: nowrap;
 }
 
 .logo-accent {
@@ -2190,10 +2191,21 @@ textarea {
 		font-size: 2.2rem;
 	}
 	.hero-title {
-		font-size: 2.8rem;
+		font-size: 2.5rem;
 	}
 	.typing-container {
 		font-size: 1.5rem;
+	}
+	.nav-container {
+		padding: 0 16px;
+	}
+	.logo {
+		font-size: 1.25rem;
+	}
+	.lang-toggle {
+		padding: 6px 12px;
+		font-size: 0.8rem;
+		gap: 4px;
 	}
 
 	/* Navigation Drawer toggle details */
@@ -2249,8 +2261,14 @@ textarea {
 }
 
 @media (max-width: 480px) {
+	.logo {
+		font-size: 1.15rem;
+	}
 	.hero-title {
-		font-size: 2.2rem;
+		font-size: 1.8rem;
+	}
+	.typing-container {
+		font-size: 1.25rem;
 	}
 	.hero-cta-group {
 		flex-direction: column;
@@ -2258,5 +2276,17 @@ textarea {
 	}
 	.hero-cta-group .btn {
 		width: 100%;
+	}
+}
+
+@media (max-width: 380px) {
+	.logo {
+		font-size: 1.05rem;
+	}
+	.lang-toggle {
+		padding: 6px 8px;
+	}
+	.lang-toggle .lang-text {
+		display: none; /* Hide EN/UZ text on tiny viewports to keep elements in single row */
 	}
 }
